@@ -16,7 +16,7 @@ Write-Host "Using MSBuild at: $msbuildPath"
 
 # Build Solution
 $sln = Join-Path $PSScriptRoot "..\WalnutApp.sln"
-& $msbuildPath $sln -p:Configuration=Debug -p:Platform=x64 -p:VcpkgEnabled=false
+& $msbuildPath $sln -p:Configuration=Debug -p:Platform=x64
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Build failed with exit code $LASTEXITCODE"

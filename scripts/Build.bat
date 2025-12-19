@@ -18,7 +18,7 @@ if "%MSBuildPath%"=="" (
 
 echo Using MSBuild at: "%MSBuildPath%"
 
-"%MSBuildPath%" "%~dp0..\WalnutApp.sln" -p:Configuration=Debug -p:Platform=x64 -p:VcpkgEnabled=false
+"%MSBuildPath%" "%~dp0..\WalnutApp.sln" -p:Configuration=Debug -p:Platform=x64
 if %ERRORLEVEL% NEQ 0 (
     echo Build failed with exit code %ERRORLEVEL%
     exit /b %ERRORLEVEL%
